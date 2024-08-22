@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MoviesApp</string>
+    <string name="search_movies">Search Movies</string>
+    <string name="enter_movie">Enter Movie</string>
+    <string name="search">Search</string>
+    <string name="movie_image">movie_image</string>
+</resources>
