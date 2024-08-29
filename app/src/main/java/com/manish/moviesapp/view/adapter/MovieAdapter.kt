@@ -17,6 +17,7 @@ class MovieAdapter(private val movieList: List<Movie>, private val clickCallback
             binding.apply {
                 title.text = movie.title
                 Glide.with(root).load(movie.poster).into(movieImage)
+
                 root.setOnClickListener{
                     clickCallback.onClick(movie.imdbID)
                 }
@@ -25,7 +26,7 @@ class MovieAdapter(private val movieList: List<Movie>, private val clickCallback
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
-        val binding = MovieLayourBinding.inflate(LayoutInflater.from(parent.context))
+        val binding = MovieLayourBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MovieViewHolder(binding)
     }
 
