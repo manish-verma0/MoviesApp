@@ -36,6 +36,7 @@ class MovieModule {
     fun provideMovieService(okHttpClient: OkHttpClient) : MovieService {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
+            .client(okHttpClient)
             .baseUrl(Constants.BASE_URL)
             .build()
             .create(MovieService::class.java)
